@@ -30,6 +30,10 @@ header, main{
   padding: 0 10px;
 }
 
+.hide{
+  display: none;
+}
+
 .display-flex{
     display: flex;
 }
@@ -51,9 +55,9 @@ color: #202020;}
   color:#64C8FF;}
 .cyan2{
   color: #05D4DF;}
-.purple2{
+.purple{
   color:#5D58EF;}
-.purpleReadMore{
+.purple2{
   color: #8700FF;}
 
 .btn-primary{
@@ -64,6 +68,11 @@ color: #202020;}
   font-weight: 600;
   font-size: 1.25rem;
   border: none;
+}
+
+.section-title{
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 /* Header Section  */
@@ -144,7 +153,85 @@ color: #202020;}
   font-weight: 200;
 }
 
+/* Our Curriculum Section*/
+.curriculum{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 60px 0px;
+}
 
+.cards{
+  display: flex;
+  max-width: var(--maximum-width);
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.card{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border-radius: 1.1rem;
+  border: 1px solid #DEF5FF;
+  padding: 52px 40px;
+  gap: 32px;
+}
+
+.card .card-image{
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+}
+.card .card-title{
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #202020;
+}
+
+.card .card-description{
+  font-weight: 600;
+  font-size: 1rem;
+  color: #808080;
+  font-family: "Raleway", serif;;
+}
+.card h5{
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.card1{
+  background:linear-gradient(to bottom, #DEF5FF, white 40%);
+}
+.card2{
+  background:linear-gradient(to bottom, #FFF4DC, white 40%);
+}
+.card3{
+  background:linear-gradient(to bottom, #EEE1FF, white 40%);
+}
+
+.arrows{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.arrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background-color: #FEA301;
+  border: none;
+}
+
+/* Media Query for Small Device  */
 @media screen and (max-width:576px){
   .top-section{
     border: 1px solid #FEA301;
@@ -181,4 +268,6 @@ color: #202020;}
   .hero button{
     font-size: 1rem;
   }
+
+  /* Small Device  */
 }
