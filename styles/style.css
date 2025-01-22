@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
+:root {
+  --maximum-width:1200px;
+}
 .quicksand-font {
   font-family: "Quicksand", serif;
   font-optical-sizing: auto;
@@ -23,9 +25,11 @@ img{
   width: 100%;
 }
 header, main{
-  max-width: 1200px;
+  max-width: var(--maximum-width);
   margin: 0 auto;
+  padding: 0 10px;
 }
+
 .display-flex{
     display: flex;
 }
@@ -38,7 +42,7 @@ color: #202020;}
 .black66{
     color:#666666;}
 .orange{
-  color: orange;}
+  color: #FEA301;}
 .orange2{
   color: #F0AA00;}
 .skyblue{
@@ -64,10 +68,17 @@ color: #202020;}
 
 /* Header Section  */
 /* Top Styles */
+.top-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+}
+
 .top-portion{
+  width: var(--maximum-width);
   justify-content: space-between;
   align-items: center;
-  margin: 1.25rem auto;
 }
 
 .top-portion .logo-part{
@@ -76,36 +87,54 @@ color: #202020;}
 }
 
 .top-portion .logo-part h2{
-  text-wrap-style: bold;
+  font-weight:700;
   font-size: 2rem;
 }
-.navbar{
+
+.top-portion .mobile-nav{
+  display:none;
+}
+
+.top-portion .navbar{
   width: 30%;
 }
-.navbar ul{
+
+.top-portion .navbar ul{
   justify-content: space-between;
   align-items: center;
 }
+
 .top-portion .nav-item{
   list-style: none;
 }
+
 .top-portion .nav-link{
   text-decoration: none;
 }
+
 .btn-contact{
   background-color: orange;
 }
 
 /* Hero Styles */
 .hero{
-  height: 575px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .hero .text{
-  width: 55%;
+  width: 52%;
 }
+.hero .photo{
+  width: 42%;
+}
+
+.hero h1{
+  font-weight: 700;
+  font-size: 3.5rem;  
+}
+
 .hero .text p{
   font-size: 1.25rem;
   margin-top: 1.5rem;
@@ -114,11 +143,42 @@ color: #202020;}
 .hero .text button{
   font-weight: 200;
 }
-.hero .photo{
-  width: 40%;
-}
 
-.hero h1{
-  font-weight: 700;
-  font-size: 3.5rem;  
+
+@media screen and (max-width:576px){
+  .top-section{
+    border: 1px solid #FEA301;
+  }
+  .top-portion .navbar,
+  .top-portion .btn-contact{
+    display: none;
+  }
+  .top-portion .logo-part .photo{
+    border: 1px solid #FEA301;
+  }
+  .top-portion .mobile-nav{
+    display: inline;
+    border: 1px solid #FEA301;
+  }
+
+  .hero{
+    flex-direction: column-reverse;
+  }
+  .hero .text, 
+  .hero .photo{
+    margin: 20px 10px;
+    width: calc(100% - 20px);
+    text-align: center;
+  }
+
+  .hero h1{
+    font-size: 2rem;
+  }
+  .hero p{
+    font-size: calc(14px / 16);
+    font-weight: 600;
+  }
+  .hero button{
+    font-size: 1rem;
+  }
 }
