@@ -33,6 +33,13 @@ nav ul li:hover{
 }
 
 
+marquee {
+  border: 1px solid rgba(0, 0, 0, 0.852);
+  background-color: yellow;
+  color: red;
+  padding: 10px;
+  font-size: 1.25rem;
+}
 
 /* Shared Styles */
 *{
@@ -528,9 +535,10 @@ footer{
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
   .footer-container{
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
   }
 }
